@@ -1,0 +1,8 @@
+c:\users\john\documents\visual studio 2012\Projects\PiratasCostaRica\PiratasCostaRica\bin\Debug\PiratasCostaRica.exe.config
+C:\Users\John\Desktop\PiratasCostaRica\PiratasCostaRica\bin\Debug\PiratasCostaRica.exe.config
+C:\Users\John\Desktop\PiratasCostaRica\PiratasCostaRica\obj\Debug\PiratasCostaRica.Properties.Resources.resources
+C:\Users\John\Desktop\PiratasCostaRica\PiratasCostaRica\obj\Debug\PiratasCostaRica.csproj.GenerateResource.Cache
+C:\Users\John\Desktop\PiratasCostaRica\PiratasCostaRica\bin\Debug\PiratasCostaRica.exe
+C:\Users\John\Desktop\PiratasCostaRica\PiratasCostaRica\bin\Debug\PiratasCostaRica.pdb
+C:\Users\John\Desktop\PiratasCostaRica\PiratasCostaRica\obj\Debug\PiratasCostaRica.exe
+C:\Users\John\Desktop\PiratasCostaRica\PiratasCostaRica\obj\Debug\PiratasCostaRica.pdb
