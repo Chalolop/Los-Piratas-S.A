@@ -36,35 +36,38 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textapellido = new System.Windows.Forms.TextBox();
-            this.textedad = new System.Windows.Forms.TextBox();
-            this.texttel = new System.Windows.Forms.TextBox();
-            this.textced = new System.Windows.Forms.TextBox();
-            this.textplaca = new System.Windows.Forms.TextBox();
-            this.textnombre = new System.Windows.Forms.TextBox();
-            this.textpass = new System.Windows.Forms.TextBox();
-            this.textuser = new System.Windows.Forms.TextBox();
+            this.textCHapellido = new System.Windows.Forms.TextBox();
+            this.textCHedad = new System.Windows.Forms.TextBox();
+            this.textCHtel = new System.Windows.Forms.TextBox();
+            this.textCHced = new System.Windows.Forms.TextBox();
+            this.textCHplaca = new System.Windows.Forms.TextBox();
+            this.textCHnombre = new System.Windows.Forms.TextBox();
+            this.textCHpass = new System.Windows.Forms.TextBox();
+            this.textCHuser = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textmodelo = new System.Windows.Forms.TextBox();
+            this.textCHmodelo = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.buttonregistro = new System.Windows.Forms.Button();
+            this.buttonactualizar = new System.Windows.Forms.Button();
+            this.buttonCHinhabil = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 57);
+            this.label1.Location = new System.Drawing.Point(68, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(304, 102);
+            this.label2.Location = new System.Drawing.Point(305, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 13);
             this.label2.TabIndex = 1;
@@ -73,16 +76,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 144);
+            this.label3.Location = new System.Drawing.Point(69, 174);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Telefono";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(59, 114);
+            this.label4.Location = new System.Drawing.Point(69, 144);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 3;
@@ -92,7 +96,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(58, 85);
+            this.label5.Location = new System.Drawing.Point(68, 115);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 4;
@@ -120,72 +124,72 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(304, 64);
+            this.label8.Location = new System.Drawing.Point(305, 87);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(92, 13);
             this.label8.TabIndex = 7;
             this.label8.Text = "Numero de Placa:";
             // 
-            // textapellido
+            // textCHapellido
             // 
-            this.textapellido.Location = new System.Drawing.Point(129, 82);
-            this.textapellido.Name = "textapellido";
-            this.textapellido.Size = new System.Drawing.Size(121, 20);
-            this.textapellido.TabIndex = 8;
+            this.textCHapellido.Location = new System.Drawing.Point(139, 112);
+            this.textCHapellido.Name = "textCHapellido";
+            this.textCHapellido.Size = new System.Drawing.Size(121, 20);
+            this.textCHapellido.TabIndex = 8;
             // 
-            // textedad
+            // textCHedad
             // 
-            this.textedad.Location = new System.Drawing.Point(129, 111);
-            this.textedad.Name = "textedad";
-            this.textedad.Size = new System.Drawing.Size(121, 20);
-            this.textedad.TabIndex = 9;
+            this.textCHedad.Location = new System.Drawing.Point(139, 141);
+            this.textCHedad.Name = "textCHedad";
+            this.textCHedad.Size = new System.Drawing.Size(121, 20);
+            this.textCHedad.TabIndex = 9;
             // 
-            // texttel
+            // textCHtel
             // 
-            this.texttel.Location = new System.Drawing.Point(129, 141);
-            this.texttel.Name = "texttel";
-            this.texttel.Size = new System.Drawing.Size(121, 20);
-            this.texttel.TabIndex = 10;
+            this.textCHtel.Location = new System.Drawing.Point(139, 171);
+            this.textCHtel.Name = "textCHtel";
+            this.textCHtel.Size = new System.Drawing.Size(121, 20);
+            this.textCHtel.TabIndex = 10;
             // 
-            // textced
+            // textCHced
             // 
-            this.textced.Location = new System.Drawing.Point(129, 171);
-            this.textced.Name = "textced";
-            this.textced.Size = new System.Drawing.Size(121, 20);
-            this.textced.TabIndex = 11;
+            this.textCHced.Location = new System.Drawing.Point(228, 12);
+            this.textCHced.Name = "textCHced";
+            this.textCHced.Size = new System.Drawing.Size(121, 20);
+            this.textCHced.TabIndex = 11;
             // 
-            // textplaca
+            // textCHplaca
             // 
-            this.textplaca.Location = new System.Drawing.Point(415, 61);
-            this.textplaca.Name = "textplaca";
-            this.textplaca.Size = new System.Drawing.Size(126, 20);
-            this.textplaca.TabIndex = 12;
+            this.textCHplaca.Location = new System.Drawing.Point(416, 84);
+            this.textCHplaca.Name = "textCHplaca";
+            this.textCHplaca.Size = new System.Drawing.Size(126, 20);
+            this.textCHplaca.TabIndex = 12;
             // 
-            // textnombre
+            // textCHnombre
             // 
-            this.textnombre.Location = new System.Drawing.Point(129, 54);
-            this.textnombre.Name = "textnombre";
-            this.textnombre.Size = new System.Drawing.Size(121, 20);
-            this.textnombre.TabIndex = 13;
+            this.textCHnombre.Location = new System.Drawing.Point(139, 84);
+            this.textCHnombre.Name = "textCHnombre";
+            this.textCHnombre.Size = new System.Drawing.Size(121, 20);
+            this.textCHnombre.TabIndex = 13;
             // 
-            // textpass
+            // textCHpass
             // 
-            this.textpass.Location = new System.Drawing.Point(182, 295);
-            this.textpass.Name = "textpass";
-            this.textpass.Size = new System.Drawing.Size(100, 20);
-            this.textpass.TabIndex = 14;
+            this.textCHpass.Location = new System.Drawing.Point(182, 295);
+            this.textCHpass.Name = "textCHpass";
+            this.textCHpass.Size = new System.Drawing.Size(100, 20);
+            this.textCHpass.TabIndex = 14;
             // 
-            // textuser
+            // textCHuser
             // 
-            this.textuser.Location = new System.Drawing.Point(182, 260);
-            this.textuser.Name = "textuser";
-            this.textuser.Size = new System.Drawing.Size(100, 20);
-            this.textuser.TabIndex = 15;
+            this.textCHuser.Location = new System.Drawing.Point(182, 260);
+            this.textCHuser.Name = "textCHuser";
+            this.textCHuser.Size = new System.Drawing.Size(100, 20);
+            this.textCHuser.TabIndex = 15;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(59, 171);
+            this.label9.Location = new System.Drawing.Point(179, 19);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(43, 13);
             this.label9.TabIndex = 16;
@@ -194,7 +198,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(86, 29);
+            this.label10.Location = new System.Drawing.Point(85, 55);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(106, 13);
             this.label10.TabIndex = 17;
@@ -203,18 +207,18 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(369, 29);
+            this.label11.Location = new System.Drawing.Point(369, 55);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(123, 13);
             this.label11.TabIndex = 18;
             this.label11.Text = "Informacion del Vehiculo";
             // 
-            // textmodelo
+            // textCHmodelo
             // 
-            this.textmodelo.Location = new System.Drawing.Point(415, 95);
-            this.textmodelo.Name = "textmodelo";
-            this.textmodelo.Size = new System.Drawing.Size(126, 20);
-            this.textmodelo.TabIndex = 19;
+            this.textCHmodelo.Location = new System.Drawing.Point(416, 118);
+            this.textCHmodelo.Name = "textCHmodelo";
+            this.textCHmodelo.Size = new System.Drawing.Size(126, 20);
+            this.textCHmodelo.TabIndex = 19;
             // 
             // label12
             // 
@@ -225,34 +229,54 @@
             this.label12.TabIndex = 20;
             this.label12.Text = "Informacion para registro";
             // 
-            // buttonregistro
+            // buttonactualizar
             // 
-            this.buttonregistro.Location = new System.Drawing.Point(415, 275);
-            this.buttonregistro.Name = "buttonregistro";
-            this.buttonregistro.Size = new System.Drawing.Size(94, 23);
-            this.buttonregistro.TabIndex = 21;
-            this.buttonregistro.Text = "Registrarse";
-            this.buttonregistro.UseVisualStyleBackColor = true;
+            this.buttonactualizar.Location = new System.Drawing.Point(398, 220);
+            this.buttonactualizar.Name = "buttonactualizar";
+            this.buttonactualizar.Size = new System.Drawing.Size(94, 23);
+            this.buttonactualizar.TabIndex = 21;
+            this.buttonactualizar.Text = "Actualizar";
+            this.buttonactualizar.UseVisualStyleBackColor = true;
+            // 
+            // buttonCHinhabil
+            // 
+            this.buttonCHinhabil.Location = new System.Drawing.Point(398, 285);
+            this.buttonCHinhabil.Name = "buttonCHinhabil";
+            this.buttonCHinhabil.Size = new System.Drawing.Size(94, 23);
+            this.buttonCHinhabil.TabIndex = 22;
+            this.buttonCHinhabil.Text = "Inhabilitar";
+            this.buttonCHinhabil.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(372, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 23);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // FormRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 361);
-            this.Controls.Add(this.buttonregistro);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonCHinhabil);
+            this.Controls.Add(this.buttonactualizar);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textmodelo);
+            this.Controls.Add(this.textCHmodelo);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textuser);
-            this.Controls.Add(this.textpass);
-            this.Controls.Add(this.textnombre);
-            this.Controls.Add(this.textplaca);
-            this.Controls.Add(this.textced);
-            this.Controls.Add(this.texttel);
-            this.Controls.Add(this.textedad);
-            this.Controls.Add(this.textapellido);
+            this.Controls.Add(this.textCHuser);
+            this.Controls.Add(this.textCHpass);
+            this.Controls.Add(this.textCHnombre);
+            this.Controls.Add(this.textCHplaca);
+            this.Controls.Add(this.textCHced);
+            this.Controls.Add(this.textCHtel);
+            this.Controls.Add(this.textCHedad);
+            this.Controls.Add(this.textCHapellido);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -278,19 +302,21 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textapellido;
-        private System.Windows.Forms.TextBox textedad;
-        private System.Windows.Forms.TextBox texttel;
-        private System.Windows.Forms.TextBox textced;
-        private System.Windows.Forms.TextBox textplaca;
-        private System.Windows.Forms.TextBox textnombre;
-        private System.Windows.Forms.TextBox textpass;
-        private System.Windows.Forms.TextBox textuser;
+        private System.Windows.Forms.TextBox textCHapellido;
+        private System.Windows.Forms.TextBox textCHedad;
+        private System.Windows.Forms.TextBox textCHtel;
+        private System.Windows.Forms.TextBox textCHced;
+        private System.Windows.Forms.TextBox textCHplaca;
+        private System.Windows.Forms.TextBox textCHnombre;
+        private System.Windows.Forms.TextBox textCHpass;
+        private System.Windows.Forms.TextBox textCHuser;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textmodelo;
+        private System.Windows.Forms.TextBox textCHmodelo;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button buttonregistro;
+        private System.Windows.Forms.Button buttonactualizar;
+        private System.Windows.Forms.Button buttonCHinhabil;
+        private System.Windows.Forms.Button button1;
     }
 }
