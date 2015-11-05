@@ -1,0 +1,119 @@
+
+CREATE TABLE Conductor(
+cedula int PRIMARY KEY,
+nombre varchar (20),
+apellido varchar (20),
+edad int,
+telefono int,
+nom_usuario varchar (30),
+pass varchar (30),
+año_taxi int,
+placa varchar (10),
+fecha_ingreso datetime NOT NULL,
+recaudacion int NOT NULL,
+fecha_modi datetime NOT NULL,
+estado char
+);
+
+
+CREATE TABLE Cliente(
+cedula int PRIMARY KEY,
+nombre varchar (20),
+apellido varchar (20),
+edad int,
+telefono int,
+fecha_ingreso datetime NOT NULL,
+fecha_modi datetime NOT NULL,
+estado char
+);
+
+CREATE TABLE Rutas(
+id int identity (1,1),
+ruta varchar (40),
+km int,
+bolsa int,
+fecha_ingreso datetime NOT NULL,
+fecha_modi datetime NOT NULL,
+estado char
+);
+
+-- PROCEDURES CONDUCTOR
+CREATE PROCEDURE AñadirConductor
+AS
+SELECT cedula, nombre, apellido, edad, telefono, nom_usuario,
+pass, año_taxi, placa, fecha_ingreso, recaudacion, fecha_modi, estado
+FROM Conductor 
+GO
+
+CREATE PROCEDURE ActualizarConductor
+AS
+SELECT cedula, nombre, apellido, edad, telefono, nom_usuario,
+pass, año_taxi, placa, fecha_ingreso, recaudacion, fecha_modi, estado
+FROM Conductor 
+GO
+
+CREATE PROCEDURE EstadoConductor
+AS
+SELECT cedula, estado
+FROM Conductor 
+GO
+
+-- PROCEDURES CLIENTE
+CREATE PROCEDURE AñadirCliente
+AS
+SELECT cedula,nombre,apellido,edad,telefono,fecha_ingreso,fecha_modi,estado
+FROM Cliente
+GO
+
+CREATE PROCEDURE ModificarCliente
+AS
+SELECT cedula,nombre,apellido,edad,telefono,fecha_ingreso,fecha_modi,estado
+FROM Cliente
+GO
+
+CREATE PROCEDURE EstadoCliente
+AS
+SELECT cedula, estado
+FROM Cliente 
+GO
+
+-- PROCEDURES RUTAS
+CREATE PROCEDURE AñadirRuta
+AS 
+SELECT id,ruta,km,bolsa,fecha_ingreso,fecha_modi,estado
+FROM Rutas
+GO
+
+CREATE PROCEDURE ModificarRuta
+AS 
+SELECT id,ruta,km,bolsa,fecha_ingreso,fecha_modi,estado
+FROM Rutas
+GO
+
+CREATE PROCEDURE EstadoRuta
+AS
+SELECT id, estado
+FROM Rutas
+GO
+
+--PROCEDURES RECAUDACION
+CREATE PROCEDURE RecaudacionRuta
+AS
+SELECT id, bolsa
+FROM Rutas
+GO
+
+CREATE PROCEDURE RecaudacionConductor
+AS
+SELECT cedula, recaudacion
+FROM Conductor
+GO
+
+-- PROCEDURE CONSULTA CHOFER
+CREATE PROCEDURE ConsultaConductor
+AS
+SELECT nom_usuario,pass
+FROM Conductor
+GO
+
+
