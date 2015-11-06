@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PiratasCostaRica.Entidades
 {
-    class Rutas
+    class Globales
     {
     }
 }

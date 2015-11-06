@@ -6,3 +6,5 @@ C:\Users\John\Desktop\PiratasCostaRica\PiratasCostaRica\bin\Debug\PiratasCostaRi
 C:\Users\John\Desktop\PiratasCostaRica\PiratasCostaRica\bin\Debug\PiratasCostaRica.pdb
 C:\Users\John\Desktop\PiratasCostaRica\PiratasCostaRica\obj\Debug\PiratasCostaRica.exe
 C:\Users\John\Desktop\PiratasCostaRica\PiratasCostaRica\obj\Debug\PiratasCostaRica.pdb
+C:\Users\John\Desktop\PiratasCostaRica\PiratasCostaRica\obj\Debug\PiratasCostaRica.csprojResolveAssemblyReference.cache
+C:\Users\John\Desktop\PiratasCostaRica\PiratasCostaRica\obj\Debug\PiratasCostaRica.Formularios.FormInicial.resources

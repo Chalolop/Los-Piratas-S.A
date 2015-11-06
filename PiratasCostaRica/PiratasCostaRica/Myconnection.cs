@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace PiratasCostaRica.BDConection
 {
-    class Myconection
+    class Myconnection
     {
         private string sqlConnection = "Data Source=LENOVO-PC;Initial Catalog=TSQL2012;Integrated Security=true";
         //private string sqlConnection =
