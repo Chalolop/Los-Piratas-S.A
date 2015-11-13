@@ -1,0 +1,236 @@
+USE master
+GO
+
+CREATE TABLE Conductores(
+cedula int PRIMARY KEY,
+nombre varchar (20),
+apellido varchar (20),
+edad int,
+telefono int,
+nom_usuario varchar (30),
+pass varchar (30),
+anio_taxi int,
+placa varchar (10),
+fecha_ingreso datetime NOT NULL,
+recaudacion int NOT NULL,
+fecha_modi datetime NOT NULL,
+estado char
+);
+
+
+CREATE TABLE Clientes(
+cedula int PRIMARY KEY,
+nombre varchar (20),
+apellido varchar (20),
+edad int,
+telefono int,
+fecha_ingreso datetime NOT NULL,
+fecha_modi datetime NOT NULL,
+estado char
+);
+
+CREATE TABLE Rutas(
+id int identity (1,1),
+ruta varchar (40),
+km int,
+bolsa int,
+fecha_ingreso datetime NOT NULL,
+fecha_modi datetime NOT NULL,
+estado char
+);
+
+
+--##############################################################################################
+
+-- PROCEDURES INSERTAR CONDUCTOR
+go
+CREATE PROCEDURE AñadirConductor
+@pcedula int,
+@pnombre varchar (20),
+@papellido varchar (20),
+@pedad int,
+@ptelefono int,
+@pnom_usuario varchar (30),
+@ppass varchar (30),
+@panio_taxi int,
+@pplaca varchar (10),
+@pfecha_ingreso datetime,
+@precaudacion int,
+@pestado char
+
+AS
+INSERT INTO Conductores(cedula,nombre,apellido,edad,telefono,nom_usuario,pass,anio_taxi,placa,
+fecha_ingreso,recaudacion,estado)
+VALUES (@pcedula,@pnombre ,@papellido,@pedad ,@ptelefono,@pnom_usuario,@ppass ,@panio_taxi,
+@pplaca,GETDATE(),@precaudacion,@pestado)
+GO
+
+--EXEC InsterStudent ----------------------
+--##############################################################################################
+-- PROCEDURES ACTUALIZAR CONDUCTOR
+CREATE PROCEDURE ActualizarConductor
+@pcedula int,
+@pnombre varchar (20),
+@papellido varchar (20),
+@pedad int,
+@ptelefono int,
+@pnom_usuario varchar (30),
+@ppass varchar (30),
+@panio_taxi int,
+@pplaca varchar (10),
+@pfecha_modi datetime
+
+AS
+      UPDATE Conductores
+      SET [cedula]=@pcedula,[nombre]=@pnombre,[apellido]=@papellido,[edad]=@pedad,
+	  [telefono]=@ptelefono,[nom_usuario]=@pnom_usuario,[pass]=@ppass,[anio_taxi]=@panio_taxi,
+	  [placa]=@pplaca,[fecha_modi]=GETDATE()
+
+      WHERE  cedula=@pcedula
+GO
+
+--##############################################################################################
+CREATE PROCEDURE DeshabilitarConductor
+@pcedula int,
+@pfecha_modi datetime,
+@pestado char
+
+AS
+      UPDATE Conductores
+      SET [fecha_modi]=GETDATE(), [estado]=@pestado
+
+      WHERE  cedula=@pcedula
+GO
+--##############################################################################################
+--CREATE PROCEDURE EstadoConductor
+--AS
+--SELECT cedula, estado
+--FROM Conductores 
+--GO
+--##############################################################################################
+
+-- PROCEDURES CLIENTE
+CREATE PROCEDURE AnadirCliente
+@pcedula int,
+@pnombre varchar (20),
+@papellido varchar (20),
+@pedad int,
+@ptelefono int,
+@pfecha_ingreso datetime,
+@pestado char
+
+AS
+INSERT INTO Clientes(cedula,nombre,apellido,edad,telefono,fecha_ingreso,estado )
+VALUES(@pcedula,@pnombre,@papellido,@pedad,@ptelefono,GETDATE(),@pestado)
+GO
+
+--##############################################################################################
+CREATE PROCEDURE ModificarCliente
+@pcedula int,
+@pnombre varchar (20),
+@papellido varchar (20),
+@pedad int,
+@ptelefono int,
+@pfecha_modi datetime
+
+AS
+UPDATE Clientes
+SET [nombre]=@pnombre,[apellido]=@papellido,[edad]=@pedad,[telefono]=@ptelefono,
+[fecha_modi]=GETDATE()
+WHERE cedula=@pcedula
+GO
+--##############################################################################################
+CREATE PROCEDURE DeshabilitarCliente
+@pcedula int,
+@pfecha_modi datetime,
+@pestado char
+AS
+UPDATE Clientes
+SET [fecha_modi]=GETDATE(),[estado]=@pestado
+WHERE cedula=@pcedula
+GO
+--##############################################################################################
+
+--CREATE PROCEDURE EstadoCliente
+--AS
+--SELECT cedula, estado
+--FROM Clientes 
+--GO
+--##############################################################################################
+
+-- PROCEDURES RUTAS
+CREATE PROCEDURE AnadirRuta
+@pruta varchar (40),
+@pkm int,
+@pbolsa int,
+@pfecha_ingreso datetime,
+@pestado char
+
+AS 
+INSERT INTO Rutas(ruta,km,bolsa,fecha_ingreso,estado)
+VALUES(@pruta,@pkm,@pbolsa,GETDATE(),@pestado)
+GO
+--#############################################################################################
+CREATE PROCEDURE ModificarRuta
+@pruta varchar (40),
+@pkm int,
+@pfecha_modi datetime
+
+AS 
+UPDATE Rutas
+SET [km]=@pkm,[fecha_modi]=GETDATE()
+WHERE ruta=@pruta
+GO
+--###############################################################################################
+CREATE PROCEDURE DeshabilitarRuta
+@pruta varchar (40),
+@pestado char,
+@pfecha_modi datetime
+
+AS 
+UPDATE Rutas
+SET [estado]=@pestado,[fecha_modi]=GETDATE()
+WHERE ruta=@pruta
+GO
+--###############################################################################################
+CREATE PROCEDURE RecuperarRuta
+AS
+SELECT id,ruta,km,bolsa,fecha_ingreso,fecha_modi
+FROM Rutas
+go
+
+--###############################################################################################
+CREATE PROCEDURE RecaudacionConductor
+@pdinero INT,
+@pcedula VARCHAR (15)
+AS
+SELECT SUM (recaudacion)+@pdinero
+FROM Conductores
+WHERE cedula=@pcedula
+GO
+--###############################################################################################
+CREATE PROCEDURE RecaudacionRuta
+@pdinero INT,
+@pruta VARCHAR (30)
+AS
+SELECT SUM (bolsa)+@pdinero
+FROM Rutas
+WHERE ruta=@pruta
+GO
+--###############################################################################################
+
+
+
+-- PROCEDURE CONSULTA CHOFER
+CREATE PROCEDURE RecuperarConductor
+AS
+SELECT cedula,nombre,apellido,edad,telefono,nom_usuario,pass,anio_taxi,placa,
+fecha_ingreso, fecha_modi,recaudacion,estado
+FROM Conductores
+GO
+
+CREATE PROCEDURE RecuperarCliente
+AS
+SELECT cedula,nombre,apellido,edad,telefono,fecha_ingreso, fecha_modi,estado
+FROM Clientes
+GO
